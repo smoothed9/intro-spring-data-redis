@@ -1,0 +1,15 @@
+package com.sudeepnm.redis.introspringdataredis;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@EnableAutoConfiguration
+public class IntroSpringDataRedisApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(IntroSpringDataRedisApplication.class, args);
+	}
+
+}

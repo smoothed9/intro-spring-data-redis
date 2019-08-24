@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure

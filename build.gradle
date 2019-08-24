@@ -1,0 +1,28 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.6.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.sudeepnm.redis'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+ext['junit-jupiter.version']   = '5.5.1'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation group: 'org.apache.commons', name: 'commons-pool2', version: '2.6.2'
+	implementation group: 'redis.clients', name: 'jedis', version: '2.9.3'
+	implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
+	
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api'
+
+}
