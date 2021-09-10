@@ -1,5 +1,11 @@
 spring:
   application:
     name: intro-spring-data-redis
+---
+spring:
+  config:
+    activate:
+      on-profile: local
   redis:
     url: redis://localhost:6379
+---
